@@ -1,0 +1,28 @@
+﻿@page "/search"
+@inject NavigationManager NavigationManager
+<input placeholder="Buscar..." @bind-value="MyValue" @bind-value:event="oninput" @onkeyup="DoTheThing" />
+
+
+@code{
+
+    public string MyValue { get; set; }
+
+    bool forceLoad = true;
+    private void DoTheThing(KeyboardEventArgs eventArgs)
+    {
+        
+        
+        if (eventArgs.Key == "Enter")        // fire on enter
+        {
+            Console.WriteLine("Done the thing: " + MyValue);
+        }
+        else
+        {
+
+            NavigationManager.NavigateTo("/resultado/"+MyValue); 
+
+
+
+        }
+    }
+}

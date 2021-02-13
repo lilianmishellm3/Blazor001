@@ -1,0 +1,55 @@
+﻿@page "/portafolio"
+@inject HttpClient Http
+
+
+
+<section class="ae-container-fluid rk-main">
+
+    <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
+
+
+        <div class="au-xs-ta-center au-lg-ta-left">
+
+            <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+
+
+
+                @foreach (var art in productos)
+                {
+                    <a class="rk-item ae-masonry__item" href="@($"/items/{art.cod}")">
+                        <img src="@art.Url" />
+                        <div class="item-meta">
+                            <h2>@art.Titulo</h2>
+                            <p>@art.Categoria</p>
+                        </div>
+
+
+
+                    </a>
+                }
+
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+
+</section>
+
+<footer>
+    <Blazor001.Pages.Shared.FooterPage />
+</footer>
+
+
+@code {
+
+
+
+
+
+}

@@ -1,0 +1,71 @@
+﻿@page "/items/{cod}"
+
+<div>
+    @if (@producto == null)
+    {
+
+        <h1>Cragando......</h1>
+    }
+    else
+    {
+
+        <div class="col-lg-12">
+
+
+            <div class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner">
+
+
+
+
+                <div class="ae-grid ae-grid--collapse">
+                    <div class="ae-grid__item item-lg-6"><img src="assets/productos/@cod/pic-1.jpg" alt="Urku Portfolio"></div>
+                    <div class="ae-grid__item item-lg-5 item-lg--offset-1 au-lg-ptp-1">
+                        <h4 class="ae-u-bolder">@producto.Producto</h4>
+                        <h3 class="ae-u-bolder">@producto.Categoria</h3>
+                        <p class="ae-eta">@producto.Desc1</p>
+                    </div>
+                </div>
+                <div class="ae-grid--alt test">
+                    <div class="ae-grid__item--alt item-sm--auto item-sm--offset-1 item-lg--offset-0 item-sm--end item-sm--bottom">
+                        <div class="ae-grid ae-grid--alt8 au-xs-ta-center au-sm-ta-left">
+                            <div class="ae-grid__item--alt8 item-lg-6">
+                                <span class="ae-u-boldest">1.</span>
+                                <p class="au-mt-1">@producto.Categoria</p><span class="ae-u-boldest">2.</span>
+                                <p class="au-mt-1">@producto.Subtitulo1</p>
+                            </div>
+                            <div class="ae-grid__item--alt8 item-lg-6">
+                                <span class="ae-u-boldest">3.</span>
+                                <p class="au-mt-1">@producto.Subtitulo2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ae-grid__item--alt item-sm--auto item-lg-3 item-lg--offset-1 item-lg--end"><img src="assets/productos/@cod/pic-2.jpg" alt="Urku Portfolio"></div>
+                </div>
+            </div>
+            <div class="ae-container-fluid au-pt-4 au-pb-4">
+                <div class="group-buttons">
+                    <a href="#0" class="au-mt-2 arrow-button arrow-button--right">
+                        Next Project<span class="arrow-cont">
+                            <svg>
+                                <use xlink:href="assets/img/symbols.svg#arrow"></use>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    }
+
+
+</div>
+
+@code {
+    
+
+}

@@ -1,0 +1,33 @@
+﻿@page "/resultado/{Palabra}"
+<div class="au-xs-ta-center au-lg-ta-left">
+
+
+
+    <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+
+        @if (FilterProductos == null)
+        {
+            <h1>Ninguno</h1>
+        }
+        else
+        {
+
+            @foreach (var item in FilterProductos)
+            {
+                <a class="rk-item ae-masonry__item">
+                    <img src="@item.Url" alt="">
+                    <div class="item-meta">
+                        <h2>@item.Titulo</h2>
+                        <p>@item.Categoria</p>
+                    </div>
+                </a>
+
+            }
+        }
+
+
+
+    </div>
+
+
+</div>
